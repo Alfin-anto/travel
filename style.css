@@ -1,0 +1,539 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'poppins',sans-serif;
+
+}
+body{
+    overflow-x: hidden;
+    /* background-color: #6f4f46; */
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(./image/background.jpg);
+    background-size: cover;
+    background-position: center;
+    
+   
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+}
+.logo{
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+}
+.register-btn{
+    color: white;
+}
+.register-btn:hover{
+    background-color: #193648;
+    color: wheat;
+}
+.nav-links li{
+    list-style: none;
+    display: inline;
+    margin: 20px 30px;
+    padding-left: 50px;
+    margin-top: 10px;
+ 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.nav-links :hover{
+   color: rgb(228, 70, 35);
+    
+}
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+   list-style: none;
+}
+.register-btn{
+    background: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 20px;
+   justify-content: end;
+}
+.container{
+    padding: 0 7%;
+}
+.header h1{
+    font-size: 4vw;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    padding: 2%;
+    margin-top: 14%;
+}
+
+.search-bar{
+ background-color: white;
+ width: 70%;
+ margin: 30px auto;
+ padding: 6px 10px 6px 30px;
+ border-radius: 50px;
+}
+.search-bar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.search-bar form input{
+    display: block;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.search-bar form button{
+    background: #ff5361;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.search-bar form button img{
+   width: 35px;
+   margin-top: 7px; 
+}
+.location-input{
+    flex: 1;
+    /* the item will grow to fill any available space in the flex container. */
+}
+.search-bar form  label{
+    font-weight: 600;
+}
+.sub-title{
+    margin: 50px 0 20px;
+    font-size: 2.2w;
+    font-weight: 500;
+    color: #333;
+
+}
+.exclusives{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    display: grid;
+    /* : This property sets the display type of the element to "grid", indicating that it will be a grid container. */
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+     /* keyword ensures that the columns adjust themselves to fit the container. */
+    grid-gap: 30px;
+    transition: transform 0.2s ease;
+    /* property will be animated over a half-second duration with a smooth acceleration and deceleration.. */
+    cursor: pointer;
+}
+
+.exclusives img:hover {
+ 
+    transform: translate(15px);
+ }
+
+.exclusives div img{
+width: 100%;
+border-radius: 10px;
+}
+.exclusives div{
+    position: relative;
+}
+.exclusives div span{
+position: absolute;
+top: 25%;
+left: 50%;
+transform: translate(-50%,50%);
+text-align: center;
+color: white;
+}
+
+/* /TREDING */
+
+.container1{
+    position: relative;
+    display: flex;
+   
+    flex-wrap: wrap;
+    /* wrap: Flex items are laid out in multiple lines if they don't fit in a single line. The container will create new lines as necessary. */
+    gap: 10px 50px;
+    padding: 2px 10px;
+
+}
+.container1 .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition: 0.5s;
+}
+.container .card:hover{
+    height: 400px;
+
+}
+.container1 .card .imgBx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    /*  overflows the box will be hidden  */
+    transition: 0.5s;
+}
+.container1 .card:hover .imgBx{
+    top: -190px;
+    box-shadow: 0 15px 45px rgba(0, 0green, 0blue, 0.2);
+}
+.container1 .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container1 .card .content{
+    position: absolute;
+    top:252px ;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    text-align: center; 
+     transition: 0.5s;
+}
+.container1 .card:hover .content{
+   height: 250px;
+   top:130px ;
+}
+.container1 .card .content h2{
+    font: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+    /* --clr is a custom CSS variable */
+}
+.container1 .card .content p{
+   color: #333;
+
+}
+.container1 .card .content a{
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding:  12px 25px;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.treding h3{
+    font-weight: 600;
+    margin-top: 10px;
+    
+}
+/* service */
+.category-title{
+    text-align: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+.category-title h5{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 20px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.card:hover{
+    transform: translateY(15px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.card-info p {
+    color: #666;
+}
+
+
+.book-now-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #34dbd3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Add a hover effect */
+.book-now-button:hover {
+    background-color: #171b1f;
+}
+
+/* stories */
+.stories{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+grid-gap: 30px;
+margin-bottom: 30px;
+}
+.stories div img{
+    width: 100%;
+    border-radius: 10px;
+}
+.stories div {
+    position: relative;
+    text-align: center;
+}
+.stories p{
+    width: 80%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    color: white;
+    font-size: 26px;
+  
+}
+.start-btn{
+    text-decoration: none;
+    background: #ff5361;
+    color: #fff;
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    text-align: center;
+    margin: 60px auto;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 20;
+    transition: background-color 0.3s ease;
+}
+.start-btn:hover {
+    background-color: #171b1f;
+}
+
+/* about */
+.about-msg{
+    text-align: center;
+    margin: 80px;
+    color: #333;
+    font-size: 17px;
+   
+}
+.about-msg h2{
+    font-size: 28px;
+margin-bottom: 30px;
+font-weight: 500;
+}
+.about-us{
+     padding-top: 40px;
+}
+/* contact */
+
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #35739d;
+}
+.icon-set{
+    justify-content: center;
+    display:flex;
+   align-items: center;
+   margin-top: 3rem;
+}
+
+ .icon,.up-arrow{
+    width: 50px;
+    height: 50px;
+  /*   border: 1px solid black; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 15px;
+
+ }
+ /* .icon:hover{
+     background-image: linear-gradient(to bottom right ,rgb(55, 255, 0),rgb(94, 42, 9)) */
+     /*one or more color ,we want use linear-gradient*/
+     .wh{
+        color: rgb(39, 177, 18);
+       
+     }
+     .wh:hover{
+        background-color: rgb(33, 128, 18);
+     }
+.in{
+    color: rgb(203, 14, 99);
+}
+.in:hover{
+    background-color: rgb(141, 4, 73);
+}
+.tw:hover{
+    background-color: #3498db;
+}
+
+ .icon,.up-arrow i{
+    color: rgb(18, 129, 177);
+    font-size: 2rem;
+}
+.icon:hover i{
+   /* color:rgb(36, 207, 121); */
+   animation: shake 0.75s;
+}
+@keyframes shake{
+    10%{
+        transform: rotate(-15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+.icon i{
+    justify-content: space-between;
+    padding: 10px;
+}
+footer p{
+    text-align: center;
+    font-weight: bolder;
+}
+.up-arrow{
+    background-image: linear-gradient(to bottom right ,rgb(160, 172, 166),rgb(255, 98, 0));
+    float: right;
+    margin: 10px 20px 70px 0px;
+}
+.up-arrow:hover i{
+    color:white;
+}
+/* .heading {
+    align-items: center;
+} */
+#footer{
+    background-color: rgb(255, 255, 255);
+    padding: 30px 0;
+    font-size: 14px;
+    margin-top: 50px;
+   
+
+}
+#footer .footer-links a{
+    color: white;
+    font-weight: bold;
+    padding-left: 15px;
+     margin-bottom: 15px;
+
+}
+#footer .footer-links a:first-child{
+    padding-left: 0;
+}
+#footer .footer-links a:hover{
+    color: rgba(255,166,0)
+}
+.copyright{
+
+    color: rgb(255, 9, 9);
+}
+.copyright{
+   justify-content: center;
+
+}
+.footer-links{
+    margin-top: -80px;
+}
